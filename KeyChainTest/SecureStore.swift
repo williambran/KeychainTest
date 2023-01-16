@@ -18,14 +18,14 @@ class SecureStore {
         self.secureStoreQueryable = secureStoreQueryable
     }
     
-    public func setValue(into1: String, into2: String) throws  {
+    public func setValue(password: String, account: String) throws  {
         
-        guard let encodePassword = into1.data(using: .utf8) else {
+        guard let encodePassword = password.data(using: .utf8) else {
             throw SecureStoreError.stringDataConversionError
         }
         
         var query = secureStoreQueryable.query
-        query[String(kSecAttrAccount)] = into2
+        query[String(kSecAttrAccount)] = account
         
         
         var status = SecItemCopyMatching(query as CFDictionary, nil)
@@ -92,6 +92,16 @@ class SecureStore {
        // query[String(kSecAttrAccount)] = into2   agregar cuado sea borrado de un solo valor 
         let status = SecItemDelete(query as CFDictionary)
         guard status == errSecSuccess || status == errSecItemNotFound else {
+            throw SecureStoreError.stringDataConversionError
+        }
+    }
+    
+    func removeValue(account: String) throws {
+        var query = secureStoreQueryable.query
+        
+        query[String(kSecAttrAccount)] = account
+        let status = SecItemDelete(query as CFDictionary)
+        guard  status == errSecSuccess || status == errSecItemNotFound else {
             throw SecureStoreError.stringDataConversionError
         }
     }
