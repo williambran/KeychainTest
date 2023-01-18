@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89A93E5F29768C3500B8A340 /* InternetPasswordQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A93E5E29768C3500B8A340 /* InternetPasswordQueryable.swift */; };
+		89A93E6129768E3200B8A340 /* InternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A93E6029768E3200B8A340 /* InternetProtocol.swift */; };
+		89A93E632977DE7900B8A340 /* InternetPasswordKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A93E622977DE7900B8A340 /* InternetPasswordKeychain.swift */; };
 		89FC617B2970FE2A00040B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC617A2970FE2A00040B18 /* AppDelegate.swift */; };
 		89FC617D2970FE2A00040B18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC617C2970FE2A00040B18 /* SceneDelegate.swift */; };
 		89FC617F2970FE2A00040B18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FC617E2970FE2A00040B18 /* ViewController.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89A93E5E29768C3500B8A340 /* InternetPasswordQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetPasswordQueryable.swift; sourceTree = "<group>"; };
+		89A93E6029768E3200B8A340 /* InternetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetProtocol.swift; sourceTree = "<group>"; };
+		89A93E622977DE7900B8A340 /* InternetPasswordKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetPasswordKeychain.swift; sourceTree = "<group>"; };
 		89FC61772970FE2A00040B18 /* KeyChainTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyChainTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FC617A2970FE2A00040B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89FC617C2970FE2A00040B18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +104,9 @@
 				89FC61882970FE3200040B18 /* Info.plist */,
 				89FC61902973F6F100040B18 /* SecureStoreQueryable.swift */,
 				89FC61922973F73E00040B18 /* GenericPasswordQueryable.swift */,
+				89A93E5E29768C3500B8A340 /* InternetPasswordQueryable.swift */,
 				89FC61A72973FE5F00040B18 /* SecureStore.swift */,
+				89A93E6029768E3200B8A340 /* InternetProtocol.swift */,
 			);
 			path = KeyChainTest;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				89FC61972973FC8D00040B18 /* GenericPasswordKeychain.swift */,
+				89A93E622977DE7900B8A340 /* InternetPasswordKeychain.swift */,
 				89FC619F2973FD8B00040B18 /* KeyChainTestTests.swift */,
 			);
 			path = KeyChainTestTests;
@@ -213,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A93E5F29768C3500B8A340 /* InternetPasswordQueryable.swift in Sources */,
 				89FC617F2970FE2A00040B18 /* ViewController.swift in Sources */,
 				89FC617B2970FE2A00040B18 /* AppDelegate.swift in Sources */,
+				89A93E6129768E3200B8A340 /* InternetProtocol.swift in Sources */,
 				89FC617D2970FE2A00040B18 /* SceneDelegate.swift in Sources */,
 				89FC61912973F6F200040B18 /* SecureStoreQueryable.swift in Sources */,
 				89FC618F2970FF1100040B18 /* KeychainManager.swift in Sources */,
@@ -227,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A93E632977DE7900B8A340 /* InternetPasswordKeychain.swift in Sources */,
 				89FC61A62973FD9900040B18 /* GenericPasswordKeychain.swift in Sources */,
 				89FC61A02973FD8B00040B18 /* KeyChainTestTests.swift in Sources */,
 			);

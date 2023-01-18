@@ -34,7 +34,7 @@ class GenericPasswordKeychain: XCTestCase {
 
     func test_setPasswordTokeychain() throws {
         do {
-            try secureStoreWithGenericPwd.setValue(password: "123456789", account: "gnericPassword")
+            try secureStoreWithGenericPwd.setValue(password: "123456789", for: "gnericPassword")
         }
         catch {
             XCTFail("Fallo al salvarlo")
@@ -45,7 +45,7 @@ class GenericPasswordKeychain: XCTestCase {
         var password : String?
         
         do {
-            try secureStoreWithGenericPwd.setValue(password: "123456789", account: "gnericPassword")
+            try secureStoreWithGenericPwd.setValue(password: "123456789", for: "gnericPassword")
             password =  try secureStoreWithGenericPwd.getValue(into2: "gnericPassword")
         }
         catch {
@@ -75,8 +75,8 @@ class GenericPasswordKeychain: XCTestCase {
         let accounGeneric = "genericPassword"
         var password: String?
         do{
-            try secureStoreWithGenericPwd.setValue(password: "pass_123", account: accounGeneric)
-            try secureStoreWithGenericPwd.setValue(password: passwordNew, account: accounGeneric)
+            try secureStoreWithGenericPwd.setValue(password: "pass_123", for: accounGeneric)
+            try secureStoreWithGenericPwd.setValue(password: passwordNew, for: accounGeneric)
             
             password = try secureStoreWithGenericPwd.getValue(into2: accounGeneric )
         }
@@ -92,8 +92,8 @@ class GenericPasswordKeychain: XCTestCase {
         let accounGeneric2 = "genericPassword2"
 
         do {
-            try secureStoreWithGenericPwd.setValue(password: "pass_123", account: accounGeneric)
-            try secureStoreWithGenericPwd.setValue(password: "pass_000", account: accounGeneric2)
+            try secureStoreWithGenericPwd.setValue(password: "pass_123", for: accounGeneric)
+            try secureStoreWithGenericPwd.setValue(password: "pass_000", for: accounGeneric2)
             
             try secureStoreWithGenericPwd.removeValue(account: accounGeneric)
             XCTAssertNil(try secureStoreWithGenericPwd.getValue(into2:accounGeneric))
@@ -110,8 +110,8 @@ class GenericPasswordKeychain: XCTestCase {
 
 
         do {
-            try secureStoreWithGenericPwd.setValue(password: "pass_123", account: accounGeneric)
-            try secureStoreWithGenericPwd.setValue(password: "pass_123456", account: accounGeneric2)
+            try secureStoreWithGenericPwd.setValue(password: "pass_123", for: accounGeneric)
+            try secureStoreWithGenericPwd.setValue(password: "pass_123456", for: accounGeneric2)
 
 
             try secureStoreWithGenericPwd.removeAllValue()
