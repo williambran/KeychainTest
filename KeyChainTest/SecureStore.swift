@@ -18,7 +18,7 @@ class SecureStore {
         self.secureStoreQueryable = secureStoreQueryable
     }
     
-    public func setValue(password: String, account: String) throws  {
+    public func setValue(password: String, for account: String) throws  {
         
         guard let encodePassword = password.data(using: .utf8) else {
             throw SecureStoreError.stringDataConversionError
