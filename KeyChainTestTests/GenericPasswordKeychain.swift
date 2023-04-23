@@ -26,7 +26,7 @@ class GenericPasswordKeychain: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         
-       try? secureStoreWithGenericPwd.removeAllValue()
+      // try? secureStoreWithGenericPwd.removeAllValue()
         
         super.tearDown()
 
@@ -45,8 +45,9 @@ class GenericPasswordKeychain: XCTestCase {
         var password : String?
         
         do {
-            try secureStoreWithGenericPwd.setValue(password: "123456789", for: "gnericPassword")
+          //  try secureStoreWithGenericPwd.setValue(password: "123456789", for: "gnericPassword")
             password =  try secureStoreWithGenericPwd.getValue(into2: "gnericPassword")
+            print("password", password)
         }
         catch {
             XCTFail("Fallo al salvarlo")
